@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summary Report</title>
+</head>
+<body>
+    <h2>Summary Report</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>State</th>
+                <th>DPD</th>
+                <th>Account No.</th>
+                <th>Customer Pin</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{item.date}}</td>
+                <td>{{ item.state }}</td>
+                <td>{{ item.dpd }}</td>
+                <td>{{item.account}}</td>
+                <td>{{ item.pin }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
